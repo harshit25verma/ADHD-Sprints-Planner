@@ -1,0 +1,8 @@
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username NOT NULL, hash TEXT NOT NULL);
+CREATE UNIQUE INDEX username ON users (username);
+CREATE TABLE sprints (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, text TEXT NOT NULL, added_datetime, completed_status, completed_datetime, deleted_status, deleted_datetime, user_id INTEGER NOT NULL);
+CREATE TABLE tasks (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, text TEXT NOT NULL, added_datetime, completed_status, completed_datetime, deleted_status, deleted_datetime, sprint_id INTGER NOT NULL, user_id INTEGER NOT NULL);
+CREATE TABLE subtasks (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, text TEXT NOT NULL, added_datetime, completed_status, completed_datetime, deleted_status, deleted_datetime, task_id INTEGER NOT NULL, user_id INTEGER NOT NULL);
+CREATE TABLE notepad (user_id INTEGER NOT NULL, text TEXT NOT NULL, edited_datetime);
+CREATE TABLE break (assigned_time INTEGER NOT NULL, edited_datetime, user_id INTEGER NOT NULL);
