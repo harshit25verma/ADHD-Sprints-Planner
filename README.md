@@ -1,6 +1,12 @@
 # ADHD Planner — Cloud-Native Productivity Tool for the ADHD Community
 
 #### 🎥 Video Demo: <https://youtu.be/rpovbp-KzNo?si=-tD9AO_zNUyaszBu>
+#### Each Page of the Web App:
+![Register Page](https://github.com/user-attachments/assets/4b013c48-6a57-4159-a8c0-ef040a2c6391)
+![Login Page](https://github.com/user-attachments/assets/43f7b5ae-2fc3-488b-a029-0a52961f00a8)
+![Execute Empty Page](https://github.com/user-attachments/assets/a359f6a4-3240-453d-b9e3-73d5c8e4ce2c)
+![Plan Page](https://github.com/user-attachments/assets/84e178e8-25b4-4717-9324-1aa8ccd6de0c)
+![Execute Page](https://github.com/user-attachments/assets/07f90b7d-d364-4336-aed6-a9820e72bb48)
 
 ## Overview
 
@@ -104,3 +110,4 @@ adhd-planner-cloud/
 ├── ansible/            # Server configuration & hardening
 ├── kubernetes/         # K8s deployment manifests
 └── .github/workflows/  # CI/CD pipeline
+
