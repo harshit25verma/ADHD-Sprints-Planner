@@ -1,113 +1,157 @@
-# ADHD Planner — Cloud-Native Productivity Tool for the ADHD Community
+<div align="center">
 
-#### 🎥 Video Demo: <https://youtu.be/rpovbp-KzNo?si=-tD9AO_zNUyaszBu>
-#### Each Page of the Web App:
-![Register Page](https://github.com/user-attachments/assets/4b013c48-6a57-4159-a8c0-ef040a2c6391)
-![Login Page](https://github.com/user-attachments/assets/43f7b5ae-2fc3-488b-a029-0a52961f00a8)
-![Execute Empty Page](https://github.com/user-attachments/assets/a359f6a4-3240-453d-b9e3-73d5c8e4ce2c)
-![Plan Page](https://github.com/user-attachments/assets/84e178e8-25b4-4717-9324-1aa8ccd6de0c)
-![Execute Page](https://github.com/user-attachments/assets/07f90b7d-d364-4336-aed6-a9820e72bb48)
+<br/>
 
-## Overview
+```
+ █████╗ ██████╗ ██╗  ██╗██████╗     ██████╗ ██╗      █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗ 
+██╔══██╗██╔══██╗██║  ██║██╔══██╗    ██╔══██╗██║     ██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗
+███████║██║  ██║███████║██║  ██║    ██████╔╝██║     ███████║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝
+██╔══██║██║  ██║██╔══██║██║  ██║    ██╔═══╝ ██║     ██╔══██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗
+██║  ██║██████╔╝██║  ██║██████╔╝    ██║     ███████╗██║  ██║██║ ╚████║██║ ╚████║███████╗██║  ██║
+╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═════╝    ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
+```
 
-**ADHD Planner** is a productivity tool designed specifically for individuals with ADHD, addressing challenges that traditional to-do lists and Pomodoro apps often fail to solve.
+### Sprint-based productivity · Built for ADHD brains · Containerised
 
-Rather than treating tasks as isolated items or forcing prolonged focus on a single activity, this application introduces a **sprint-based productivity system** that aligns with how ADHD minds naturally work.
+<br/>
 
-This repository represents the **cloud-native evolution** of an originally local Flask application, enhanced with modern DevOps, Infrastructure-as-Code, and CI/CD practices.
+[![Demo](https://img.shields.io/badge/▶︎%20Watch%20Demo-YouTube-red?style=flat-square)](https://youtu.be/rpovbp-KzNo?si=-tD9AO_zNUyaszBu)
+![Stack](https://img.shields.io/badge/Stack-Flask%20%7C%20Docker-blue?style=flat-square)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-black?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Local%20%7C%20Deploying%20Soon-orange?style=flat-square)
 
----
-
-## The Problem with Traditional Productivity Tools
-
-People with ADHD face a unique challenge: productivity is not just about time management, but about coordinating multiple tasks within fixed time limits while maintaining engagement.
-
-- Time blocking often fails due to boredom
-- Long focus sessions collapse when attention drifts
-- Task-switching leads to unfinished work
-
-Traditional tools assume linear focus. ADHD brains don’t work that way.
+</div>
 
 ---
 
-## The Sprint-Based Solution
+<br/>
 
-The core innovation of this tool is the **Sprint** concept.
+## `/ the problem`
 
-A sprint is a curated group of related tasks that can be completed together without breaking momentum. Tasks are grouped by **context, location, or mental state**, allowing variety without chaos.
+> Traditional to-do apps assume **linear focus**. ADHD brains don't work that way.
 
-**Example sprints:**
-- Watching YouTube while washing dishes  
-- Listening to a podcast while cleaning  
-- Studying on a computer while eating  
+Time blocking causes boredom. Long sessions collapse. Task-switching leaves everything half-done. Most productivity tools solve the wrong problem.
 
-This approach embraces stimulation while still driving completion.
+<br/>
 
 ---
 
-## Key Features
+## `/ the solution — sprints`
 
-- **Flexible Timer System** — optional, fully adjustable sprint timers  
-- **Hierarchical Task Structure** — sprints → tasks → subtasks  
-- **Integrated Notepad** — quick brain-dumping without context switching  
-- **Dual-Mode Interface**
-  - **Plan Mode**: create/edit sprints, tasks, timers, notes
-  - **Execute Mode**: only execute — no planning, no distractions  
+A **Sprint** is a curated group of tasks completed together, grouped by context, location, or mental state. Variety without chaos.
 
-This separation drastically reduces cognitive load during execution.
+```
+sprint: "morning wind-down"
+ ├── wash dishes          ← while watching YouTube
+ ├── sort laundry         ← podcast in background
+ └── reply to messages    ← low mental load
+```
 
----
+> Embrace stimulation. Still get things done.
 
-## Technical Implementation (Application Layer)
-
-- **Backend**: Python, Flask  
-- **Templating**: Jinja2  
-- **Database**: SQLite (`adhd-planner.db`)  
-- **Frontend Logic**: JavaScript (timer functionality)
-
-The stack was intentionally kept lightweight to focus on usability and rapid iteration.
+<br/>
 
 ---
 
-## Cloud-Native & DevOps Architecture
+## `/ app preview`
 
-This repository extends the original local application into a **production-inspired cloud system**.
+<!-- 📸 Add 1–2 screenshots here — recommend Plan Mode + Execute Mode -->
 
-### Containerization
-- Dockerized Flask application
-- Portable, reproducible runtime
+<div align="center">
 
-### Infrastructure as Code (IaC)
-- **Terraform** provisions AWS EC2 infrastructure
-- Declarative, version-controlled infrastructure
+![Plan Page](https://github.com/user-attachments/assets/f43b2341-8203-4463-8176-e39b5c32f3a6)
+![Execute Page](https://github.com/user-attachments/assets/3e3035a6-004d-4335-a9f6-7de40230f8f3)
+![Execute Empty Page](https://github.com/user-attachments/assets/86e7c547-0b1f-45c6-a9bc-643cdb9ee47c)
+</div>
 
-### Configuration Management
-- **Ansible** installs Docker and applies basic OS hardening on RHEL-based systems
+<br/>
 
-### CI/CD Pipeline
-- **GitHub Actions** builds Docker images on push
-- Demonstrates automated build & deployment workflows
-
-### Kubernetes Orchestration
-- Kubernetes Deployment manifest provided
-- Horizontal scaling and container orchestration readiness
-
-## Future Development
-- Productivity analytics dashboard
-- Sprint completion metrics
-- Break frequency tracking
-- Cloud database backend (RDS / managed DB)
-- Authentication hardening and secrets management
 ---
 
-## Repository Structure
+## `/ two modes, one purpose`
 
-```text
+| Mode | What it does |
+|------|-------------|
+| 🗂️ **Plan** | Create sprints, tasks, subtasks, set timers & notes |
+| ▶️ **Execute** | Run your plan — zero distractions, no editing |
+
+> Separating planning from execution removes the biggest ADHD trap: re-planning instead of doing.
+
+<br/>
+
+---
+
+## `/ architecture`
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                     APPLICATION                         │
+│         Flask · Jinja2 · SQLite · JavaScript            │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+         ┌─────────────▼─────────────┐
+         │         DOCKER            │
+         │   Containerised runtime   │
+         └─────────────┬─────────────┘
+                       │
+         ┌─────────────▼─────────────┐
+         │      GITHUB ACTIONS       │
+         │      CI/CD on push        │
+         └─────────────┬─────────────┘
+                       │
+         ┌─────────────▼─────────────┐   ← planned
+         │    AWS EC2 + Kubernetes   │
+         │   Cloud deploy · Scaling  │
+         └───────────────────────────┘
+```
+
+<br/>
+
+---
+
+## `/ stack`
+
+```
+Application      ──  Python · Flask · Jinja2 · SQLite · JS
+Containerisation ──  Docker
+CI/CD            ──  GitHub Actions
+```
+
+<br/>
+
+---
+
+## `/ repo structure`
+
+```
 adhd-planner-cloud/
-├── app/                # Flask application
-├── Dockerfile          # Container image definition
-├── terraform/          # AWS infrastructure provisioning
-├── ansible/            # Server configuration & hardening
-├── kubernetes/         # K8s deployment manifests
-└── .github/workflows/  # CI/CD pipeline
+├── app/                 ← Flask application
+├── Dockerfile           ← Container image
+├── kubernetes/          ← K8s manifests (in progress)
+└── .github/workflows/   ← CI/CD pipeline
+```
 
+<br/>
+
+---
+
+## `/ roadmap`
+
+- [ ] AWS EC2 deployment
+- [ ] Kubernetes orchestration & scaling
+- [ ] Analytics dashboard — sprint completion metrics
+- [ ] Break frequency tracking
+- [ ] Cloud database backend (RDS)
+- [ ] Auth hardening & secrets management
+
+<br/>
+
+---
+
+<div align="center">
+
+*Built for the brain that works differently.*
+
+[![Demo](https://img.shields.io/badge/▶︎%20Watch%20Demo-YouTube-red?style=flat-square)](https://youtu.be/rpovbp-KzNo?si=-tD9AO_zNUyaszBu)
+
+</div>
